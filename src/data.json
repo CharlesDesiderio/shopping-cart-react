@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Restaurant 1",
+        "rating": 5,
+        "genre": "Asian Cuisine",
+        "image": "1.jpg",
+        "menu": [
+            {
+                "type": "Appetizers",
+                "menu": [["Salad", 19.99], ["fruit", 7.99]]
+            },
+            {
+                "type": "Main Course",
+                "menu": [["Meal 1", 12.99], ["Meal 2", 8.99] ]
+            }
+        ]
+    },
+    {
+        "name": "Restaurant 2",
+        "rating": 3,
+        "genre": "Texmex",
+        "image": "2.jpg",
+        "menu": [
+            {
+                "type": "Appetizers",
+                "menu": [["Burrito 1", 12.99], ["Burrito 2", 8.99] ]
+            },
+            {
+                "type": "Main Course",
+                "menu": [["Taco 1", 12.99], ["Taco 2", 8.99] ]
+            }
+        ]
+    },
+    {
+        "name": "Third Restaurant",
+        "rating": 2,
+        "genre": "Butt Food",
+        "image": "3.jpg",
+        "menu": [
+            {
+                "type": "Appetizers",
+                "menu": [["Poop", 0.99], ["Poop, but different", 0.99]]
+            },
+            {
+                "type": "Main Course",
+                "menu": [["Crap", 6.66], ["Trash", 7.77]]
+            }
+        ]
+    }
+]

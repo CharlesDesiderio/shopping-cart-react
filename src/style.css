@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 16px 32px 16px 32px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.4;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+p {
+    font-size: 1.4rem;
+}
+
+.restaurantList {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.restaurant {
+    background-color: #ecf0f1;
+    margin: 10px;
+    border-radius: 0 0 15px 15px;
+}
+
+.resData {
+    padding: 0px 16px 16px 16px;
+}
+
+img {
+    max-width: 500px;
+    width: 500px;
+    height: 300px;
+}
+
+.selectedRestaurant {
+    width: 80%;
+    margin: auto;
+    margin-top: 5rem;
+}

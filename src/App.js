@@ -1,26 +1,51 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./style.css";
+import data from "./data.json";
+import SelectedRestaurant from "./SelectedRestaurant.js";
 
-function App() {
+const App = () => {
+  const [rest, setRest] = useState("");
+
+  const changeRest = (data) => {
+    setRest(data);
+  };
+  
+const displayRest = () => {
+  return rest ? (
+  <div>
+    <p onClick={() => setRest(0)}>Back</p>
+    <SelectedRestaurant data={rest} />
+  </div>
+  ) : ''
+}
+
+const displayList = () => {
+  return rest ? '' : (
+    <div className="restaurantList">
+    {data.map((x) => {
+      return (
+        <div onClick={() => changeRest(x)} className="restaurant">
+          <img alt="Restaurant Interior" src={`/images/${x.image}`} />
+          <div className="resData">
+            <p>{x.name}</p>
+            <p>{x.rating}</p>
+            <p>{x.genre}</p>
+          </div>
+
+
+        </div>
+      );
+    })}
+  </div>
+  )
+}
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        { displayList() }
+        { displayRest() }
     </div>
   );
-}
+};
 
 export default App;
