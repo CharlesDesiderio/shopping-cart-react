@@ -4,10 +4,19 @@ const SelectedRestaurant = (data) => {
     const [cart, setCart] = useState([])
     
     const cartUpdate = (x) => {
-        if (cart.includes(x[0])) {
-            console.log(cart.indexOf(x[0]))
+    
+        let newMenu = [...cart];
+    
+        if (newMenu.includes(x)) {
+            newMenu[newMenu.indexOf(x)+1]++;
+            console.log(newMenu);
+        } else {
+            newMenu.push(x, 1);
+            console.log(newMenu);
         }
-        setCart(cart.concat([x[0], x[1]]))
+        
+        setCart(newMenu);
+    
     }
 
     return (
